@@ -9,13 +9,30 @@
   </head>
   <body>
     <div class="hero">
-       <input type="text" name="" id="url" />
-    <button id="button">Descargar</button> 
+       <form action="/data_video" method="post">
+        <input type="text" name="url">
+        <button type="submit">Descargar</button>
+       </form> 
     </div>
     
     <img src="" alt="" id="previa">
     <span id="title"></span>
-    <script>
+    <div class="card">
+        <img src="{{thumbail_url}}" class="card-img-top" alt="">
+        <div>
+            <p class="card-title">{{title}}</p>
+            <form action="/video" method="post" class="m-1">
+                <input type="text" value="{{url}}" name="url">
+                <button class="btn btn-danger">Descargar MP4</button>
+            </form>
+        </div>
+        
+
+        <!-- <form action="/download/{{url}}" method="post" class="m-1">
+            <button class="btn btn-danger">Descargar MP4</button>
+        </form> -->
+    </div>
+    <!-- <script>
       document.getElementById("button").addEventListener("click", async () => {
         const response = await fetch("/adios", {
           method: "POST",
@@ -30,7 +47,7 @@
         // document.getElementById("title").innerText = data.title
         // console.log(data);
       });
-    </script>
+    </script> -->
     <style>
         #previa{
             width: 200px;

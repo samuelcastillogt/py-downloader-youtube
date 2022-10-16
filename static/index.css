@@ -22,3 +22,13 @@
     color: black;
     font-weight: bold;
 }
+.card{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-img-top{
+    width: 100%;
+
+}
