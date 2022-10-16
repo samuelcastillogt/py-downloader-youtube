@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/index.css">
+    <title>Descargador de Videos</title>
+  </head>
+  <body>
+    <div class="hero">
+       <input type="text" name="" id="url" />
+    <button id="button">Descargar</button> 
+    </div>
+    
+    <img src="" alt="" id="previa">
+    <span id="title"></span>
+    <script>
+      document.getElementById("button").addEventListener("click", async () => {
+        const response = await fetch("/adios", {
+          method: "POST",
+          body: JSON.stringify({ url: document.getElementById("url").value }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+        // const data = await response.json();
+        // console.log(data)
+        // document.getElementById("previa").setAttribute("src", data.imagen)
+        // document.getElementById("title").innerText = data.title
+        // console.log(data);
+      });
+    </script>
+    <style>
+        #previa{
+            width: 200px;
+        }
+    </style>
+  </body>
+</html>

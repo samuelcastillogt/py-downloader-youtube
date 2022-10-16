@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.hero{
+    height: 200px;
+    background-color: #c00;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.hero input{
+    margin: 10px;
+    border-radius: 20px;
+    padding: 10px;
+}
+.hero button{
+    margin: 10px;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: aliceblue;
+    color: black;
+    font-weight: bold;
+}
